@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简书</title>
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/vue.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/axios.min.js"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="header">
+            <div class="left">
+                <img src="img/log.png">
+            </div>
+            <div class="middle">
+                <a id="sy" href="">首页</a>
+                <a id="App" href="">下载APP</a>
+                <input type="text" data-target="#content1" placeholder="搜索">  <!--data-target为自定义属性-->    
+                <img src="img/sreach.png">
+                <div class="ssk">
+                    <div class="xsj"></div> 
+                    <div class="ssk1"  id="content">      <!--id为连接锚点-->
+                        <ul class="ul">
+                            <li id="rm">热门搜索</li>
+                            <li class="huan">
+                                <a href="#" class="rem1">
+                                    <img src="img/rotate.png" class="rem2" alt="">
+                                    <!--<span><span class="glyphicon glyphicon-refresh"></span></span>-->
+                                    换一批
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="ul ul2">    
+                            <li><a href="#">区块链</a></li>
+                            <li><a href="#">小程序</a></li>
+                            <li class="PHP"><a class="rem1" href="">PHP</a></li>
+                            <li><a href="#">毕业</a></li>
+                            <li><a href="#">故事</a></li>
+                            <li class="PHP"><a class="rem1" href="">理财</a></li>
+                            <li><a href="#" class="rem1">美食</a></li>
+                            <li><a href="#" class="rem1">书法</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <a id="Aa" href=""><b>Aa</b></a>
+                <a :href="signin">登录</a>
+                <a id="zc" href="#">注册</a>
+                <a id="xwz" href="#">写文章</a>
+                <div  class="Aa">
+                    <div>
+                        <img src="img/night.png" alt="">
+                        夜间模式
+                        <a class="kLeft" id="k" href="#">开</a>
+                        <a class="gRight" id="g" href="#">关</a>
+                    </div>
+                    <div id="Aast">
+                        <a class="kLeft" id="st" href="#">宋体</a>
+                        <a class="gRight" id="ht" href="#">黑体</a>
+                    </div>
+                    <div id="Aafj">
+                        <a class="kLeft" id="j" href="#">简</a>
+                        <a class="gRight" id="f" href="#">繁</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="zt">
+        <div class="ztleft">
+            <div id="lb">
+                <a class="show" href=""><img  src="img/lunbo1.jpg" alt=""></a>
+                <a href="#"><img src="img/lunbo2.jpg" alt=""></a>
+                <a href="#"><img src="img/lunbo3.jpg" alt=""></a>
+                <a href="#"><img src="img/lunbo4.jpg" alt=""></a>
+                <a href="#"><img src="img/lunbo5.jpg" alt=""></a>
+            </div>
+            <div class="leftzt"> 
+                <a href="#">
+                    <img src="img/shouhui.jpg" alt="">
+                    <span>手绘</span>
+                </a>
+                <a href="#">
+                    <img src="img/dian.jpg" alt="">
+                    <span>简书电影</span>
+                </a>
+                <a href="#">
+                    <img src="img/sheying.jpg" alt="">
+                    <span>摄影</span>
+                </a>
+                <a href="#">
+                    <img src="img/gushi.jpg" alt="">
+                    <span>故事</span>
+                </a>
+                <a href="#">
+                    <img src="img/lvxing.png" alt="">
+                    <span>旅行在路上</span>
+                </a>
+                <a href="#">
+                    <img src="img/IT.jpg" alt="">
+                    <span>@IT·互联网</span>
+                </a>
+                <a href="#">
+                    <img src="img/dushu.jpg" alt="">
+                    <span>读书</span>
+                </a>
+                <a href="special.html" class="gd">更多热门专题 &gt;</a>     
+            </div>
+            <p style="clear:both"></p>
+            <ul class="article" id="ul1">   
+                <li class="article1" v-for="(item,i) in res">
+                    <img class="contentimg" :src="item.img" alt="">
+                    <h1><a :href="`index.html?uid=${i+1}`">{{item.title}}</a></h1>  
+                    <div class="content">{{item.content}}
+                    </div>
+                    <p class="author">
+                        <a href="index.html">{{item.author}}</a>
+                        <a href="#">
+                            <img src="img/pl.png" alt="">3
+                        </a>
+                        <a href="#">
+                            <img src="img/xin.png" alt="">10
+                        </a>
+                    </p>
+                </li>
+                <li class="contentlast" id="getMore">
+                    <a @click="getMore()"  href="#"><b>阅读更多</b></a>
+                </li>
+                <li>
+                    <footer>
+                        <div class="copy">
+                            <span><a href=""> 关于简书</a></span>
+                            <span>·</span>
+                            <span><a href="">联系我们</a></span>
+                            <span>·</span>
+                            <span><a href="">加入我们</a></span>
+                            <span>·</span>
+                            <span><a href="">简书出版</a></span>
+                            <span>·</span>
+                            <span><a href="">品牌与徽标</a></span>
+                            <span>·</span>
+                            <span><a href="">帮助中心</a></span>
+                            <span>·</span>
+                            <span><a href="">合作伙伴</a></span>
+                        </div>
+                        <div class="copy1">
+                            <span>&copy; 2012-2018 上海佰集信息科技有限公司 / 简书 / 沪ICP备11018329号-5 / </span>
+                            <img src="img/banquan1.png" alt="">
+                        </div>
+                        <div class="copy1">
+                            <a href=""> 沪公网安备31010402002252号 / </a><img id="bq2i" src="img/banquan2.png" alt=""> 举报电话：021-34770013 / <img id="bq3i" src="img/banquan3.png" alt="">
+                        </div>
+                    </footer>
+                </li>
+            </ul>
+        </div>
+        <div class="ztright">
+            <div class="ztright1">
+                <a href="list.html?type=pop"><img src="img/7riremen.png" alt=""></a>
+                <a href="#"><img src="img/30riremen.png" alt=""></a>
+                <a href="#"><img src="img/you.png" alt=""></a>
+                <a href="#"><img src="img/jian.png" alt=""></a>
+                <a href="#"><img src="img/jian2.png" alt=""></a>
+            </div>
+            <div class="code">    
+                <a target="_blank" id="code" href="#">
+                    <div class="Qcode">
+                        <img src="img/erweima.png" alt="">
+                        <span>下载简书手机App &gt;</span>
+                        <span>随时随地发现和创建内容</span>
+                    </div>
+                </a>
+                
+                <div id="erweima">
+                    <img src="img/erweima.png" alt="">
+                    <div id="xsj"></div>
+                </div>
+            </div>
+            <div id="tj">
+                <div id="tjtop">
+                    <span >推荐作者</span>
+                    <span class="tjautor">
+                        <img src="img/rotate.png" alt="">换一批
+                    </span>
+                </div>
+                <ul>
+                    <li>
+                        <img src="img/wu.jpg" alt="">
+                        <div class="tjautor1">
+                            <a href="" class="tjautor2"><span>无限猴子</span></a>
+                            <a href=""><span class="attention">+关注</span></a>
+                            <p class="attent">93.9k字·293喜欢</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/jsbq.jpg" alt="">
+                        <div class="tjautor1">
+                            <a href="" class="tjautor2"><span >简书版权</span></a>
+                            <a href=""><span class="attention">+关注</span></a>
+                            <p class="attent">写了493k字 · 43.6k喜欢</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/bql.png" alt="">
+                        <div class="tjautor1">
+                            <a href="" class="tjautor2"><span>冰千里</span></a>
+                            <a href=""><span class="attention">+关注</span></a>
+                            <p class="attent">写了426.3k字 · 6.7k喜欢</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/qht.jpg" alt="">
+                        <div class="tjautor1">
+                            <a href=""  class="tjautor2"><span>乔汉童</span></a>
+                            <a href=""><span class="attention">+关注</span></a>
+                            <p class="attent">写了510.1k字 · 1.6k喜欢</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/az.png" alt="">
+                        <div class="tjautor1">
+                            <a href="" class="tjautor2"><span >阿栈</span></a>
+                            <a href=""><span class="attention">+关注</span></a>
+                            <p class="attent">写了387.3k字 · 695喜欢</p>
+                        </div>
+                    </li>
+                </ul>
+                <div id="tjck">
+                    <a href="recommend.html">查看全部 &gt;</a>
+                </div>
+            </div>  
+            <div>
+
+            </div>
+        </div>
+        
+    </div>
+    <div class="toTop">
+        <a id="toTop" href="">^</a>
+    </div>
+    
+    <script src="js/head.js"></script>
+    <script src="js/home.js"></script>
+    
+    
+</body>
+</html>
