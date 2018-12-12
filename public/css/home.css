@@ -1,0 +1,328 @@
+/*header*/
+body{ 
+    margin:0;
+    padding:0;
+       /*删除*/
+    
+}
+
+/*div    zhuti*/
+div.zt{
+    width:1000px;
+    margin:0 auto;
+    padding:0;
+}
+#lb{
+      position:relative;
+}
+div#lb a{
+    width:625px; height:270px;
+    position:absolute; top:0; left:0;
+    opacity:0;
+    transition:all .5s linear;
+}
+div#lb a.show{ opacity:1;}
+div#lb a img{
+    height:270px;
+    border-radius: 10px;
+}
+
+/*主体左边*/
+div.zt{
+    margin-top:30px;
+}
+/*主体左边部分*/
+div.ztleft{
+    width:625px;
+    margin:0;
+    float:left;
+    padding-left:10px;
+}
+/*左边的轮播*/
+div.ztleft #lb{
+    height:270px;  
+    margin-top:5px;
+}
+/*左边的专题部分*/
+.ztleft .leftzt{
+  margin:20px 0 0 5px;
+  padding-bottom: 30px;
+  font-size:14px;
+  border-bottom: 1px solid #f7f7f7;
+}
+.leftzt a{
+    /*float:left;*/
+    display: inline-block;
+   margin:10px;
+   border:1px solid #dcdcdc;
+   border-radius:4px;
+}
+.leftzt a span{
+    color:#333;
+    line-height: 32px;  
+    background-color:#f7f7f7;
+    box-sizing:border-box;
+    padding: 6px 10px;
+    margin-left:-4px;
+}
+/*专题图片*/
+.leftzt a img{
+    width:32px;
+    vertical-align:top;
+}
+/*更多专门热题*/
+.leftzt a.gd{
+    border:none;
+    color:#333;
+    line-height:32px;
+}
+
+/*作品*/
+ul.article{
+    list-style: none;
+    margin:5px 0 5px 5px;
+    padding:0;
+}
+/*一个作品一个li*/
+ul.article li{
+    border-bottom:1px solid #f7f7f7;
+}
+/*文章标题*/
+h1{
+    font-size:20px;
+    line-height: 30px;
+}
+ul li.article1 h1 a{
+    color:black;
+}
+/*鼠标悬停有下划线*/
+ul.article li.article1 h1 a:hover{
+    text-decoration: underline;
+}
+/*内容*/
+div.content{
+    font-size:15px;
+    line-height: 30px;
+    color:rgb(150,150,150);
+}
+/*作者*/
+p.author a{
+    color:#b4b4b4;
+    margin-right:10px;
+}
+/*作者后边的评论图和心图*/
+p.author a img{
+    vertical-align: top;
+    height:23px;
+    width:25px;
+}
+/*内容里边的图片*/
+li.article1 img.contentimg{
+    height:115px;
+    float:right;
+    border-radius:5px;
+    margin-top:10px;
+}  
+li.article1 img.contentimg::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+/*内容的最后阅读更多*/
+li.contentlast{
+    border-bottom:none;
+}
+li.contentlast a{
+    margin:30px 0 80px 0;      /*阅读更多的下外边距*/ 
+    display: block;
+    background:#a5a5a5;
+    padding:10px;
+    text-align:center;
+    border-radius:50px;
+    color:white;
+    
+}
+li.contentlast a:hover{
+    background:#969696;
+    color:white;
+}
+/*页面的最底部*/
+footer div{
+    font-size:13px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+footer div span a{
+    color:#969696;
+    margin:0;
+}
+footer div span a:hover{
+    color:black;
+}
+div.copy img{
+    vertical-align:middle;
+}
+div>img#bq2i,div>img#bq3i{
+    height:30px;
+}
+footer div.copy1{
+    color:#c8c8c8;
+}
+footer div.copy1 a{
+    color:#c8c8c8;
+}
+div.copy a:hover{
+    color:black;
+}
+/*主体右边部分*/
+div.ztright{
+    width:280px;
+    float:left;
+    margin-left:50px;
+}
+/*整个二维码块*/
+div.code{
+    margin-top:20px;
+    padding:10px;
+    border:2px solid #dcdcdc;
+    border-radius:5px;
+    box-shadow:0 0  5px 2px #dcdcdc;
+    position:relative;
+}
+/*右边上面的图片*/
+div.ztright1 a img{
+    width:280px;
+    margin-bottom: 2px;    /*使左右两边的高度相等*/
+}
+/*右边二维码的整块加文字设置，鼠标进入，显示二维码*/
+
+/*右边二维码图片*/
+div.ztright #code img{
+    height:60px;
+    float:left;
+}
+/*二维码字*/
+div.Qcode span{
+    float:right;
+    line-height: 30px;
+}
+div.Qcode>img+span{
+    font-size:20px;
+    color:black;
+}
+div.Qcode>img+span+span{
+    font-size:17px;
+    color:#999;
+}
+/*清除右边二维码的浮动*/
+div.Qcode::after{
+    content:"";
+    display: block;
+    clear:both;
+}
+/*要显示的二维码*/
+div.code div#erweima{
+    height:240px;
+    width:240px;
+    border-radius:5px;
+    background:white;
+    box-shadow:0 0  5px 2px #dcdcdc;
+    position:absolute;
+    top:-260px;
+    z-index:2;
+    display:none; 
+    
+}
+
+div.code div#erweima.hover{
+    display: block;
+}
+/*鼠标悬停显示的二维码图片*/
+div#erweima img{
+    height:220px;
+    margin-top:10px;
+    margin-left:9px;
+   
+    transition: all 2s linear;               /***********没有效果*/
+}
+
+/*小三角*/
+div#xsj{
+    width:0;
+    height:0;
+    border:20px solid transparent;
+    border-top-color:#dcdcdc;
+    position:absolute;
+    top:240px;
+    left:50px;
+}
+/*推荐作者*/
+#tj{
+  margin-top:30px;
+  color:#999;
+  font-size:20px;
+}
+/*换一批*/
+#tjtop span.tjautor{
+    float:right;
+}
+#tjtop span.tjautor img{
+    vertical-align: middle;
+}
+#tj ul{
+    margin:0;
+    padding:0;
+}
+#tj ul li{
+    list-style: none;
+    margin: 20px 0;
+}
+#tj ul li img{
+    height:47px;
+    border:2px solid #dcdcdc;
+    border-radius:50px;
+    float:left;
+    
+}
+/*作者图片右边的内容*/
+div.tjautor1{
+    margin-left:75px;
+    
+}
+div.tjautor1 p{
+    margin:5px 0;
+    color:#aaa;
+} 
+div.tjautor1 a.tjautor2{
+ color:black;
+  font-size:20px;
+ 
+}
+div.tjautor1 a .attention{
+    color:#59e010;
+    float:right;
+    font-size:20px;
+}
+/*推荐作者的查看全部*/
+div#tjck a{
+    border:1px solid #dcdcdc;
+    background:#f7f7f7;
+    margin-left:10px;
+    padding:10px 80px;
+    border-radius: 5px;
+    color:#787878;
+}
+/*返回顶层*/
+div.toTop{
+    width:600px;   /*不用设这个，div的宽度没有用*/
+}
+#toTop{
+    position: fixed;
+    bottom:100px;
+    right:150px;
+    display: none;
+    border:1px solid #cdcdcd;
+    padding: 10px 20px;
+    font-size:30px;
+    color:#969696;
+}

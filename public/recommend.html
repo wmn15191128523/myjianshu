@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简书</title>
+    <link rel="stylesheet" href="css/header.css">
+   <link rel="stylesheet" href="css/recommend.css">
+    <script src="js/vue.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="left">
+                <img src="img/log.png">
+            </div>
+            <div class="middle">
+                <a id="sy" href="home.html">首页</a>
+                <a id="App" href="">下载APP</a>
+                <input type="text" data-target="#content1" placeholder="搜索">  <!--data-target为自定义属性-->    
+                <img src="img/sreach.png">
+                <div class="ssk">
+                    <div class="xsj"></div> 
+                    <div class="ssk1"  id="content">      <!--id为连接锚点-->
+                        <ul class="ul">
+                            <li id="rm">热门搜索</li>
+                            <li class="huan">
+                                <a href="">
+                                    <img src="img/rotate.png" alt="">
+                                    <!--<span><span class="glyphicon glyphicon-refresh"></span></span>-->
+                                    换一批
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="ul ul2">    
+                            <li><a href="">区块链</a></li>
+                            <li><a href="">小程序</a></li>
+                            <li class="PHP"><a href="">PHP</a></li>
+                            <li><a href="">毕业</a></li>
+                            <li><a href="">故事</a></li>
+                            <li class="PHP"><a href="">理财</a></li>
+                            <li><a href="">美食</a></li>
+                            <li><a href="">书法</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <a id="Aa" href=""><b>Aa</b></a>
+                <a href="">登录</a>
+                <a id="zc" href="">注册</a>
+                <a id="xwz" href="">写文章</a>
+                <div  class="Aa">
+                    <div>
+                        <img src="img/night.png" alt="">
+                        夜间模式
+                        <a class="kLeft" id="k" href="">开</a>
+                        <a class="gRight" id="g" href="">关</a>
+                    </div>
+                    <div id="Aast">
+                        <a class="kLeft" id="st" href="">宋体</a>
+                        <a class="gRight" id="ht" href="">黑体</a>
+                    </div>
+                    <div id="Aafj">
+                        <a class="kLeft" id="j" href="">简</a>
+                        <a class="gRight" id="f" href="">繁</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="zt">
+        <img id="zti1" src="img/tuijianzuozhe.png" alt="">
+        <div class="container" id="container">
+                <div class="ztnr" v-for="item in res">
+                        <a href="#"><img :src="item.img" alt=""></a>
+                        <a href="#"><h2>{{item.name}}</h2></a>
+                        <a href="#"><p>{{item.title}}</p></a>
+                        <a href="#"><span>+关注</span></a>
+                       <hr>
+                        <a href="#"><p class="gz">{{item.content1}}</p></a>
+                        <a href="#"><p class="gz">{{item.content2}}</p></a>
+                </div>
+                
+
+        </div>
+    </div>
+    <script src="js/head.js"></script>
+   <script src="js/recommend.js"></script>
+</body>
+</html>

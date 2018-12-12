@@ -1,0 +1,123 @@
+body{
+    margin:0;
+    padding:0;
+}
+div#zt img#zti1{
+	width:900px;
+	margin-top:30px;
+}
+
+a#sy{
+   color:#333 !important;
+}
+a#sy:hover{
+        background:#eee;
+		
+}
+div#zt{
+    width:1000px;
+    margin:0 auto;
+    padding-left:30px;
+    
+}
+div#zt .container{
+	float:left;
+    width:900px;
+   
+}
+/*主体*/
+/*主体上边*/
+#zttop{
+    text-align: left;
+
+}
+#zttop a{
+    padding:10px 20px ;
+    
+    color:#969696;
+}
+
+#zttop a:hover{
+    border-bottom: 2px #333;
+    color:#333;
+	/*border-bottom:2px solid black;*/
+}
+/*内容部分*/
+div.ztnr:hover{
+   box-shadow:0 0 6px #aaa;
+}
+div.ztnr{
+    height:270px;
+    width:250px;
+	border:1px solid #e6e6e6;
+	margin:80px 20px 20px 20px;
+	border-radius:5px;
+	float:left;
+}
+ul li{
+	list-style: none;
+	float:left;
+}
+ul:after{
+	content:"";
+	display: block;
+	clear: both;
+}
+div.ztnr a{
+    color:#333;
+    text-align: center;
+	position:relative;
+}
+div.ztnr a img{
+    width:80px;
+    text-align: center;
+	position:absolute;
+	top:-40px;
+	left:85px;
+	border-radius:10px;
+}
+div.ztnr a h2{
+	margin-top:40px;
+}
+div.ztnr p{
+	margin: 10px;
+}
+.nr{
+	height:46px;
+	font-size:15px;
+}
+div.ztnr span{
+	border:1px solid #e6e6e6;
+	padding:10px 11px;
+	margin:15px 60px;
+	display:block;
+	border-radius:50px;
+	background:#59e010;
+	color:white;
+}
+hr{
+	width:75%;
+	color:#eee;
+}
+div.ztnr p.gz{
+	margin-top:20px;
+}
+/*点一个显示相应的内容*/
+/*推荐显示*/
+div#zttop li{
+	padding:10px;
+}
+div#zttop li.active{
+	border-bottom: 2px solid #333;
+	color:#333;
+}
+div.container{
+	float: left;
+}
+div.container div.box{
+	display:none;
+}
+/*相应的显示下面的内容*/
+div.container div.box.active{
+	display:block;
+}

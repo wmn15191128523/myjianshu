@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box; 
+    text-decoration: none;
+}
+.sign{
+    height:900px;
+    font-size:14px;
+    background:#f1f1f1;
+    
+}
+.sign .logo{
+    margin-top:-10px;
+}
+.sign .main{
+    margin:0 auto;
+    background:#fff;
+    width:400px;
+    
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.sign .main .title{
+   padding:50px;
+   font-size:18px;
+  
+}
+.sign .main .title .signin{
+    color:#ea6f5a;
+    border-bottom: 2px solid #ea6f5a;
+    font-weight:bold;
+    padding:10px;
+}
+.sign .main .title .reg,.diandian{
+    color:#969696;
+    font-weight:400;
+    padding:10px;
+}
+.sign .main .login-container .login-first input{
+   width:75%;
+   height:50px;
+   border-radius: 0 0 4px 4px;
+   outline: none;
+   border:1px solid #c8c8c8;
+   padding-left:10px;
+   background:hsla(0,0%,71%,.1);
+   font-size:15px;
+   color:#969696;
+}
+#first-input{
+    border-bottom:none;
+    border-radius: 4px 4px 0 0;
+}
+.sign .main .login-container .remember-btn,.login-forget a{
+    float:left;
+    margin:15px 48px;
+    font-size:15px;
+    color:#969696;
+}
+.sign .main .login-container .remember-btn span{
+    margin-left:5px;
+}
+.sign .main .login-container .login-forget a{
+    float:right;
+
+}
+.clearfix:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+.sign .main .login-container .login-btn{
+    display:block;
+    background:#187cb7;
+    color:#fff;
+    margin:10px 50px 40px;
+    font-size:18px;
+    padding:9px 18px;
+    border-radius: 25px;
+}
+.sign .main .other-login{
+    padding-bottom:50px;
+}
+.sign .main .other-login .other-txt{
+    color:#b5b5b5;
+    font-size:12px;
+    margin-bottom:20px;
+}
+.sign .main .other-login a img{
+    vertical-align: middle;
+    padding: 0 20px;
+    
+}
+.sign .main .other-login .other{
+    vertical-align:middle;
+    color:#999;
+    font-weight:bold;
+   
+}
